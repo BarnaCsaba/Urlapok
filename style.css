@@ -111,3 +111,7 @@ code {
     min-height: 20px;
 }
 
+#nevEredmeny.hiba {
+    color: #d40202;
+    background-color: #333;
+}

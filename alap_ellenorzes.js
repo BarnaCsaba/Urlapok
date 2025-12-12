@@ -6,16 +6,22 @@ function ellenorAlap(){
 
 
 if(nev.trim() === ""){
-    alert("A név mező nem lehet üres!");
+    
     if(nevKiiratasa){
         nevKiiratasa.innerText = "A mező nem lehet üres!";
+        nevKiiratasa.classList.add("hiba"); 
+            
+                
+            
+        
     }
     return false;
 }
 
 let nevFilter = /^[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ ]+$/;
 if(!nevFilter.test(nev)){
-    alert("A név csak betűket és szóközöket tartalmazhat!");
+    nevKiiratasa.innerText = "Érvénytelen név! Csak betűk és szóközök használhatók.";
+    nevKiiratasa.classList.add("hiba");
     return false;
 }
 
